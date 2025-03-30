@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_call"
+        android:title="Gọi điện" />
+    <item
+        android:id="@+id/menu_email"
+        android:title="Gửi email" />
+    <item
+        android:id="@+id/menu_edit"
+        android:title="Sửa thông tin" />
+    <item
+        android:id="@+id/menu_delete"
+        android:title="Xóa đơn vị" />
+</menu>

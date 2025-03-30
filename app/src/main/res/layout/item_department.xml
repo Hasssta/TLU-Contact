@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/backgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            app:cardBackgroundColor="@color/colorPrimaryLight"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/department_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:contentDescription="Department Icon"
+                android:src="@drawable/ic_department"
+                android:tint="@color/colorPrimary" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/department_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên đơn vị"
+                android:textColor="@color/textPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/department_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:drawableStart="@drawable/ic_phone_small"
+                android:drawablePadding="4dp"
+                android:drawableTint="@color/colorPrimary"
+                android:text="Số điện thoại"
+                android:textColor="@color/textSecondary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/department_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:drawableStart="@drawable/ic_email_small"
+                android:drawablePadding="4dp"
+                android:drawableTint="@color/colorPrimary"
+                android:text="Email"
+                android:textColor="@color/textSecondary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/more_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Xem thêm"
+            android:src="@drawable/ic_more"
+            android:tint="@color/colorPrimary" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

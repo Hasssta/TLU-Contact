@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Màu chủ đạo: tím -->
+    <color name="colorPrimary">#673AB7</color>
+    <color name="colorPrimaryDark">#512DA8</color>
+    <color name="colorAccent">#9575CD</color>
+    <color name="colorPrimaryLight">#D1C4E9</color>
+
+    <!-- Màu nền: trắng -->
+    <color name="backgroundColor">#FFFFFF</color>
+
+    <!-- Màu văn bản -->
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+    <color name="textOnPrimary">#FFFFFF</color>
+
+    <!-- Màu phụ khác -->
+    <color name="dividerColor">#EEEEEE</color>
+    <color name="rippleColor">#B39DDB</color>
+</resources>

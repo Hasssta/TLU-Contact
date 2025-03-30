@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".MainActivity">
+
+    <!-- Thanh tiêu đề với màu tím -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TLU Contact"
+            android:textColor="@color/textOnPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/user_role_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"
+            android:textColor="@color/textOnPrimary"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:background="@drawable/role_badge_background"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp" />
+
+        <ImageButton
+            android:id="@+id/logout_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_logout"
+            android:contentDescription="Đăng xuất" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Ô tìm kiếm với viền tím nhạt -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/backgroundColor"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_search"
+                android:layout_marginStart="12dp"
+                 />
+
+            <EditText
+                android:id="@+id/search_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Tìm kiếm..."
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColorHint="@color/textSecondary"
+                android:textColor="@color/textPrimary" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Tab với màu tím -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/backgroundColor"
+        app:tabBackground="@color/backgroundColor"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/textSecondary"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorHeight="3dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:layout_constraintTop_toBottomOf="@id/search_card">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Danh sách cán bộ" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Danh sách đơn vị" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- Divider -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dividerColor"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout" />
+
+    <!-- RecyclerView thay thế cho ViewPager -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/backgroundColor"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="Thêm liên hệ"
+        android:src="@drawable/ic_add_contact"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:backgroundTint="@color/colorPrimary"
+        app:tint="@color/textOnPrimary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
